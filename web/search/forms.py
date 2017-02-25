@@ -10,7 +10,7 @@ class SubmitNeighborhood(forms.Form):
         for row in reader:
             NEIGHBORHOODS.append(tuple(row))
 
-    neighborhood = forms.ChoiceField(label='Select Neighborhood', choices=NEIGHBORHOODS, required=True)
+    neighborhood_code = forms.ChoiceField(label='Select Neighborhood', choices=NEIGHBORHOODS, required=True)
 
 
 class SubmitAlteredParameters(forms.Form):

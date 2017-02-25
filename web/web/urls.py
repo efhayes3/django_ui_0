@@ -1,3 +1,4 @@
+
 """web URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -19,6 +20,6 @@ from django.contrib import admin
 from search import views
 
 urlpatterns = [
-    url(r'^start$', views.start),
+    url(r'^$', views.start),
     url(r'^\?neighborhood=\d', views.start_part2),
 ]
