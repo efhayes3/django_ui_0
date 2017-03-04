@@ -14,5 +14,5 @@ class SubmitNeighborhood(forms.Form):
 
 
 class SubmitAlteredParameters(forms.Form):
-    alt_crime = forms.IntegerField(label='Crime Level')
-    alt_school = forms.IntegerField(label='School Quality', min_value=0, max_value=100)
+    alt_crime = forms.IntegerField(label='New Crime Level',  min_value=0, max_value=100)
+    alt_school = forms.IntegerField(label='New School Quality', min_value=0, max_value=100)

@@ -10,20 +10,16 @@
             <h2>Neighborhood Real Estate Pricing</h2>
         </div>
 
-
-        <div class='frame'>
-            <form method="get">
-                <table class='form'>
-                    {{ select_neighborhood_form }}
-                </table>
-                <input type="submit" value="Submit" />
-            </form>
-        </div>
-
-
         <div>
-            {{ neighborhood_data }}
+            <table>
+                <tr>
+                    <td>
+                    {{ current_neighborhood_data }}
+                    </td>
+                </tr>
+            </table>
         </div>
+
         <div>
             <form>
                 <table>

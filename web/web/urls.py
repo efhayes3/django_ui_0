@@ -21,5 +21,5 @@ from search import views
 
 urlpatterns = [
     url(r'^$', views.start),
-    url(r'^\?neighborhood=\d', views.start_part2),
+    url(r'^alter', views.start_part2),
 ]

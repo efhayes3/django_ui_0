@@ -10,37 +10,15 @@
             <h2>Neighborhood Real Estate Pricing</h2>
         </div>
 
-        {% if current_neighborhood_data == None %}
         <div class='frame'>
-            <form method="get">
+            <form method="post" action="./alter/">
                 <table class='form'>
+                    {% csrf_token %}
                     {{ select_neighborhood_form }}
                 </table>
                 <input type="submit" value="Submit" />
             </form>
         </div>
-        {% endif %}
-
-        {% if current_neighborhood_data != None %}
-        <div>
-            <table>
-                <tr>
-                    <td>
-                    {{ current_neighborhood_data }}
-                    </td>
-                </tr>
-            </table> 
-        </div>
-        <div class='frame'>
-            <form method="get">
-                <table class='form'>
-                    {{ alter_form }}
-                </table>
-                <input type="submit" value="Submit" />
-            </form>
-        </div>
-        {% endif %}
-
 
     </body>
 </html>
