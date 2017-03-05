@@ -8,26 +8,28 @@ from django.http import HttpResponse, HttpResponseRedirect
 
 from .forms import SubmitNeighborhood, SubmitAlteredParameters
 from .data_functions import fetch_current_data, calculate_with_alt_param
+from .models import Neighborhood
 
 
-def start2(request):
-    """
-    Show the form to select a neighborhood
-    """
+def start(request):
     context = {}
 
     if request.method == 'POST':
-        pass
+
+        select_neighborhood_form = SubmitNeighborhood(request.POST)
+        if select_neighborhood_form.is_valid():
+            neighborhood = Neighborhood()
+            pass
     else:
         select_neighborhood_form = SubmitNeighborhood()
         context['select_neighborhood_form'] = select_neighborhood_form
 
-        return HttpResponseRedirect('/alter/')
+        return
 
     return
 
 
-def start(request):
+def home(request):
     current_neighborhood_data = None
     result2 = None
     context = {}

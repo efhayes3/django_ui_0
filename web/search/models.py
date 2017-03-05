@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class Neighborhood(models.Model):
     code = models.IntegerField(primary_key=True)

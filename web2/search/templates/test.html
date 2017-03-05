@@ -1,0 +1,38 @@
+{%  load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Test</title>
+    </head>
+    <body>
+
+        <div>
+            <h2>Testing Forms</h2>
+        </div>
+
+        <div>
+            <p>Welcome! Use our calculator to make predictions about future median home prices based on
+            changes to school quality, crime rates, income levels, and CTA availability.</p>
+            <p>Start by selecting a neighborhood.</p>
+        </div>
+
+        <div class='frame'>
+            <form method="post">
+                <table class='form'>
+                    {% csrf_token %}
+                    {{ form1 }}
+                </table>
+                <br />
+                To see current statistics, leave the following fields blank. <br />
+                To make a prediction, make alterations to the following variables. <br />
+                The default value for fields left blank will be the current statistic. <br/>
+                <table class="form">
+                    {{ form2 }}
+                </table>
+                <input type="submit" value="Submit" />
+            </form>
+        </div>
+
+    </body>
+</html>
+
